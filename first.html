@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body>
+        <input number id="one" placeholder="Enter the First Number">
+    <br>
+    <br>
+    <input number id="two" placeholder="Enter the second Number">
+    <button onclick="add()">
+        add
+    </button>
+    <p>Result:<span id="re"></span></p>
+<script>
+    function add(){
+    let a=document.getElementById("one").value
+    let b=document.getElementById("two").value
+    let c=Number(a)+Number(b)
+    document.getElementById("re").innerText=c
+}
+
+</script>
+    </body>
+</html>

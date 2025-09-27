@@ -1,0 +1,20 @@
+const d1={
+    "Name":"Kamishk",
+    "Age":45,
+    "Class":12,
+     call:function(Name){
+        console.log(`Hello ${Name}`)
+    },
+     call2:function(Name,Age){
+        console.log(`Hello ${this.Name} aged ${Age}`)
+    },
+    call3:function(Name,Age){
+        console.log(`Hello ${this.Name} aged ${Age}`)
+    }
+};
+let into=d1.call;
+let into2=d1.call2;
+let into3=d1.call3;
+into.call(d1,"Kanishk");
+into2.call(d1,"Kanishk",19);
+into3.apply(d1,["Kanishk",19])

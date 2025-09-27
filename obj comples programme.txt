@@ -1,0 +1,28 @@
+let fs=require("fs");
+let input=fs.readFileSync(0,"utf-8").trim().split("\n");
+let size=input[0];
+let lastIndex=1;
+const template={
+    hikedsalary(salary,hike){
+        let hs=this.salary*(this.hike/100);
+        let adds=hs+this.salary;
+        return(adds);
+    }
+};
+let currenthighest=null;
+let highestsalary=0;
+function disp(highestsalary){
+    console.log(`${this.name} has the highest post-hike salary:${highestsalary}`)
+}
+for(let i=1;i<=size;i++){
+    const empdetail=Object.create(template);
+    empdetail.name=input[lastIndex];
+    empdetail.salary=Number(input[lastIndex+1]);
+    empdetail.hike=Number(input[lastIndex+2]);
+    lastIndex+=3;
+    if(highestsalary<empdetail.hikedsalary()){
+        highestsalary=empdetail.hikedsalary();
+        currenthighest=empdetail;
+    }
+}
+const fun2=disp.apply(currenthighest,[highestsalary]);

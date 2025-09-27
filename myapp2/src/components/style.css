@@ -1,0 +1,25 @@
+.text_color{
+    color: blue;
+    }
+    .position{
+        position:absolute;
+        transform: translate(-50,-50);
+        text-align: center;
+    }
+    .lightoff{
+        background-color: black;
+        color:white;
+    }
+    .lighton{
+        background-color: white;
+        color: black;
+    }
+    .buttonbackground{
+        background-color: white;
+        color: black;
+    }
+    .imgposition{
+        width: 150px;
+        height: auto;
+        margin: 20px 0;
+    }
