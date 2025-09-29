@@ -1,1 +1,0 @@
-a=Number(prompt("Enter "))
